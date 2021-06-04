@@ -3,12 +3,6 @@ module.exports = {
     title: "Zeop.pl",
   },
   plugins: [
-    {
-      resolve: "gatsby-source-wordpress",
-      options: {
-        url: "https://zeop.pl/blog/graphql",
-      },
-    },
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
     "gatsby-transformer-remark",
@@ -30,5 +24,24 @@ module.exports = {
       },
       __key: "pages",
     },
+    /*
+     * Gatsby's data processing layer begins with “source”
+     * plugins. Here the site sources its data from WordPress.
+     */
+    // highlight-start
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        /*
+         * The full URL of the WordPress site's GraphQL API.
+         * Example : 'https://www.example-site.com/graphql'
+         */
+        url: `https://zeop.pl/blog/graphql`,
+        schema: {
+          perPage: 10,
+        },
+      },
+    },
+    // highlight-end
   ],
 };

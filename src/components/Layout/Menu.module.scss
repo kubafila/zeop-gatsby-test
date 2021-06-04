@@ -1,0 +1,35 @@
+.nav{
+  display: none;
+}
+@media(min-width: 1000px){
+.nav{
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 20px 0;
+  &__side{
+    flex: 0 0 10rem;;
+  }
+}
+
+.menu{
+  list-style-type: none;
+  display: flex;
+  flex-grow: 1200px;
+  flex-shrink: 800px;
+  flex-basis: 1000px;
+  height: 100%;
+  margin: 0 10px;
+  justify-content: space-between;
+  align-items: center;
+  &__link{
+    text-decoration: none;
+  }
+
+  &__item{
+    display: block;
+  }
+}
+}
