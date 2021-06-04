@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "Zeop.pl",
+    pathPrefix: `/zeop-gatsby-test`,
   },
   plugins: [
     "gatsby-plugin-sass",
