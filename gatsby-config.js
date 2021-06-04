@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: `/zeop-gatsby-test`,
+  pathPrefix: "/zeop-gatsby-test",
   siteMetadata: {
     title: "Zeop.pl",
   },
