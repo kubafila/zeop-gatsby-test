@@ -6,7 +6,7 @@ import SocialMedia from './SocialMedia'
 const Menu = () => {
   return (
     <nav className={styles.nav}>
-      <div className={styles['nav__side']}><Link to="/">Logo</Link></div>
+      <div className={styles['nav__side']}><Link to="/">Zeop.pl</Link></div>
       <ul className={styles.menu}>
         <li className={styles['menu__item']}><Link to="#" className={styles['menu__link']}>O nas</Link></li>
         <li className={styles['menu__item']}><Link to="#" className={styles['menu__link']}>Działania</Link></li>
