@@ -8,7 +8,7 @@ export default function BlogPost({ data }) {
 
     <Layout>
         <h1>{post.title}</h1>
-        <img src={post.featuredImage.node.sourceUrl} />
+        {/* <img src={post.featuredImage.node.sourceUrl} /> */}
         <div dangerouslySetInnerHTML={{ __html: post.content }} />
     </Layout>
 
