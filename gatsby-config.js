@@ -4,11 +4,20 @@ module.exports = {
     title: "Zeop.pl",
   },
   plugins: [
-    "gatsby-plugin-sass",
     "gatsby-plugin-image",
     "gatsby-transformer-remark",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        cssLoaderOptions: {
+          modules: {
+            exportLocalsConvention: 'camelCaseOnly'
+          }
+        }
+      }
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {

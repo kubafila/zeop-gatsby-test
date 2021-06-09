@@ -1,11 +1,24 @@
 import React from 'react'
+import * as styles from './InitiativesListitem.module.scss'
 
-const InitiativesListitem = ({homepageInitiatives:{ title, description, image}}) => {
+const InitiativesListitem = ({homepageInitiatives:{ title, description, image, link = "#"}}) => {
   return (
+
     <article>
-      <h2>{title}</h2>
-      <div dangerouslySetInnerHTML={{ __html: description }}></div>
-      <img src={image.mediaItemUrl}/>
+      <a href={link} className={styles.initiative}>
+        <div className={styles['imageWrapper']}>
+          <img src={image.mediaItemUrl} alt={title} className={styles['image']}/>
+        </div>
+        <div>
+        <h2 className={styles.title}>{title}</h2>
+          <div className={styles.text}>
+            <div dangerouslySetInnerHTML={{ __html: description }}>
+          </div>
+      </div>
+
+      </div>
+      </a>
+        
     </article>
   )
 }

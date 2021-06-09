@@ -1,15 +1,14 @@
 import React from 'react'
 import InitiativesListItem from './InitiativesListitem'
-// import data from '../../data/InitiativesList'
-
+import * as styles from './InitiativesList.module.scss'
 
 const InitiativesList = ({nodes}) => {
   return (
-    <div>
+    <section className={styles["initiativesList"]}>
       {nodes.map(node => (
         <InitiativesListItem {...node}/>
       ))}
-      </div>
+      </section>
   )
 }
 
