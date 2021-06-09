@@ -62,6 +62,7 @@ export const query = graphql`
         homepageInitiatives {
           description
           title
+          link
           image {
             mediaItemUrl
           }
