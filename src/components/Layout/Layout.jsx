@@ -9,7 +9,9 @@ const Layout = ({children}) => {
       <main className={styles.main}>
         {children}
       </main>
-      <Footer />
+      <Footer>
+        Stopka storny
+        </Footer>
     </div>
   )
 }
