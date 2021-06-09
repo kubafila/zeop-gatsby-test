@@ -8,11 +8,11 @@ const Menu = () => {
     <nav className={styles.nav}>
       <div className={styles['nav__side']}><Link to="/">Zeop.pl</Link></div>
       <ul className={styles.menu}>
-        <li className={styles['menu__item']}><Link to="#" className={styles['menu__link']}>O nas</Link></li>
-        <li className={styles['menu__item']}><Link to="#" className={styles['menu__link']}>Działania</Link></li>
+        <li className={styles['menu__item']}><Link to="#" className={styles.link}>O nas</Link></li>
+        <li className={styles['menu__item']}><Link to="#" className={styles.link}>Działania</Link></li>
         <li className={styles['menu__item']}><SocialMedia /></li>
-        <li className={styles['menu__item']}><Link to="/blog" className={styles['menu__link']}>Blog</Link></li>
-        <li className={styles['menu__item']}><Link to="#" className={styles['menu__link']}>Kontakt</Link></li>
+        <li className={styles['menu__item']}><Link to="/blog" className={styles.link}>Blog</Link></li>
+        <li className={styles['menu__item']}><Link to="#" className={styles.link}>Kontakt</Link></li>
       </ul>
       <div className={styles['nav__side']}>Szukaj</div>
     </nav>

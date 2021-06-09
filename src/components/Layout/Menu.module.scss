@@ -1,34 +1,34 @@
-.nav{
+.nav {
   display: none;
 }
-@media(min-width: 1000px){
-.nav{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100px;
-  padding: 20px;
-  &__side{
-    flex: 0 0 10rem;;
-  }
-}
-
-.menu{
-  list-style-type: none;
-  display: flex;
-  flex-grow: 1200px;
-  flex-shrink: 800px;
-  flex-basis: 1000px;
-  height: 100%;
-  margin: 0 10px;
-  justify-content: space-between;
-  align-items: center;
-  &__link{
-    text-decoration: none;
+@media (min-width: 1000px) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 20px;
+    &__side {
+      flex: 0 0 10rem;
+    }
   }
 
-  &__item{
-    display: block;
+  .menu {
+    list-style-type: none;
+    display: flex;
+    flex-grow: 1200px;
+    flex-shrink: 800px;
+    flex-basis: 1000px;
+    height: 100%;
+    margin: 0 10px;
+    justify-content: space-between;
+    align-items: center;
+
+    &__item {
+      display: block;
+    }
   }
 }
+.link {
+  text-decoration: none;
 }
