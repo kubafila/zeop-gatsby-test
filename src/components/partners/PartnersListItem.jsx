@@ -4,11 +4,12 @@ import * as styles from './PartnersListItem.module.scss'
 
 const PartnersListItem = ({  name, type, link, logo}) => {
 
-  const logoURL = logo.localFile.childImageSharp.resize.src
+  const logoURL = logo.localFile.childImageSharp.fixed.src
   return (
     <li className={styles.partner}>
-        <img src={logoURL} width="200" height="200" />
-
+      <a href={link} className={styles.link}>
+      <img src={logoURL} width="200" className={styles.image} alt={name}/>
+      </a>
     </li>
   )
 }

@@ -24,7 +24,7 @@ const Menu = ({ scrollStarted}) => {
               </Link>
           </li>
           <li className={styles.menuItem}>
-            <Link to="#" className={styles.link}>
+            <Link to="/#initiatives" className={styles.link}>
               Działania
             </Link>
           </li>
@@ -35,7 +35,7 @@ const Menu = ({ scrollStarted}) => {
             </Link>
           </li>
           <li className={styles.menuItem}>
-            <Link to="#" className={styles.link}>
+            <Link to="/#contact" className={styles.link}>
               Kontakt
             </Link>
           </li>

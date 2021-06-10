@@ -22,7 +22,7 @@ const About = () => {
 
   return (
     <div>
-      {fullText ? text : text.slice(0, 20)}
+      {fullText ? text : text.slice(0, 75)}
       <br />
       <br />
       <button onClick={hadleClick}>Pokaż więce</button>

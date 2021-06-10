@@ -4,10 +4,10 @@ import * as styles from './InitiativesList.module.scss'
 
 const InitiativesList = ({nodes}) => {
   return (
-    <section className={styles["initiativesList"]}>
+    <section className={styles["initiativesList"]} id="initiatives">
       <h2>Nasze działania</h2>
       {nodes.map(node => (
-        <InitiativesListItem {...node}/>
+        <InitiativesListItem {...node} key={node.id}/>
       ))}
       </section>
   )

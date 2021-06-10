@@ -54,7 +54,7 @@ export const query = graphql`
           logo {
             localFile {
               childImageSharp {
-                resize(width: 200, height: 200) {
+                fixed(width: 200) {
                   src
                 }
               }

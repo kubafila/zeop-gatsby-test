@@ -4,7 +4,7 @@ import * as styles from './Contact.module.scss'
 
 const Contact = ({ homepageContact: data }) => {
   return (
-    <section>
+    <section id="contact">
       <div>
         <h2>Kontakt</h2>
         <div dangerouslySetInnerHTML={{ __html: data.intro}}></div>
