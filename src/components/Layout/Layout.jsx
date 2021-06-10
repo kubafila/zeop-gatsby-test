@@ -18,7 +18,10 @@ const Layout = ({children}) => {
     }
   };
 
-  if(isBrowser){
+  if(!isBrowser){
+    return;
+  }
+  else{
     window.addEventListener('scroll', checkScrollTop)
   }
   return (
