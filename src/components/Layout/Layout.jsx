@@ -10,7 +10,7 @@ const Layout = ({children}) => {
 
   const checkScrollTop = () => {
     if(!isBrowser){ return }
-    
+
     if (window.pageYOffset >= 100) {
       setScrollStarted(true)
     } else {
@@ -18,7 +18,9 @@ const Layout = ({children}) => {
     }
   };
 
-  window.addEventListener('scroll', checkScrollTop)
+  if(isBrowser){
+    window.addEventListener('scroll', checkScrollTop)
+  }
   return (
     <div className={styles.wrapper}>
       <Menu scrollStarted={scrollStarted}/>
