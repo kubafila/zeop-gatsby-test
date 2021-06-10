@@ -28,8 +28,7 @@ const Menu = ({ scrollStarted}) => {
               Działania
             </Link>
           </li>
-          <li className={styles.menuItem}><SocialMedia />
-          </li>
+
           <li className={styles.menuItem}>
             <Link to="/blog" className={styles.link}>
               Blog
@@ -41,7 +40,7 @@ const Menu = ({ scrollStarted}) => {
             </Link>
           </li>
         </ul>
-        <img src={logo} alt="logo" width="125" />
+        <SocialMedia />
       </div>
     </nav>
   )

@@ -9,7 +9,8 @@ export default function Home({ data }) {
       {data.allWpPost.nodes.map(node => (
         <div key={node.slug}>
           <Link to={node.slug}>
-            <h2>{node.title}</h2>
+            <p><i>{node.date}</i>{node.title}</p>
+            <br /> 
           </Link>
         </div>
       ))}
@@ -19,11 +20,17 @@ export default function Home({ data }) {
 
 export const pageQuery = graphql`
   query {
-    allWpPost(sort: { fields: [date] }) {
+    allWpPost(sort: { fields: [date], order: DESC}) {
       nodes {
         title
         excerpt
-        slug
+        slug,
+        date
+        featuredImage {
+        node {
+          srcSet
+        }
+      }
       }
     }
   }

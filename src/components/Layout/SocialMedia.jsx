@@ -8,28 +8,34 @@ const SocialMedia = ({ nodes }) => {
 
   const data = useStaticQuery(graphql`
     query HeaderQuery {
-      allWpSocial {
-        nodes {
-          homepageSocial {
-            name,
-            link
-          }
-          id
+  allWpSocial {
+    nodes {
+      homepageSocial {
+        link
+        icon {
+          sourceUrl
+        }
+        iconHover {
+          sourceUrl
         }
       }
     }
+  }
+}
+
   `)
 
 
   return (
-    <section>
-      <pre>
-       
-      </pre>
       <ul className={styles['list']}>
-        {data.allWpSocial.nodes.map(({ id, homepageSocial: { name, link } }) => (<li key={id}><a href={link}>{name}</a></li>))}
+        {data.allWpSocial.nodes.map(({ id, homepageSocial: { name, link, icon, iconHover } }) => (
+          <li key={id} className={styles.item}>
+            <a href={link}>
+              <img src={icon.sourceUrl} alt={name} height="48" width="48" />
+            </a>
+          </li>
+        ))}
       </ul>
-    </section>
   )
 }
 

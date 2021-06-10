@@ -19,15 +19,15 @@ const PartnersList = ({ nodes }) => {
   }
 
   return (
-    <div>
-      <h1>Wspierają nas</h1>
-      <h2>Honorowe</h2>
+    <section>
+      <h2>Wspierają nas</h2>
+      <h3>Honorowe</h3>
         {showPartnerType('HONORARY')}
-      <h2>Medialne</h2>
+      <h3>Medialne</h3>
         {showPartnerType('MEDIA')}
-      <h2>Zwykłe</h2>
+      <h3>Zwykłe</h3>
         {showPartnerType('NORMAL')}
-    </div>
+    </section>
   )
 }
 

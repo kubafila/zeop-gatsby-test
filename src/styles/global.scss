@@ -22,3 +22,17 @@ body{
   height: 100%;
   margin: 0 auto;
 }
+
+@media (min-width: 1024px){
+  h2{
+    font-size: 2.66rem;
+  }
+  h3{
+    font-size: 2rem;
+    margin-top: 75px;
+  }
+
+  main section{
+    margin-top: 100px;
+  }
+}

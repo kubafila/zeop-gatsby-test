@@ -4,7 +4,7 @@ import HeroImage from '../components/HeroImage'
 import About from '../components/About'
 import InitiativesList from '../components/Initiatives/InitiativesList'
 import PartnersList from '../components/partners/PartnersList'
-import Contact from '../components/Contact'
+import Contact from '../components/Contact/Contact'
 import { graphql } from "gatsby"
 
 
@@ -18,7 +18,7 @@ const index = ( { data} ) => {
         <About />
         <InitiativesList {...data.allWpInitiatives} />
         <PartnersList {...data.allWpPartnetrs}/>
-        <Contact />
+        <Contact {...data.allWpGeneral.nodes[0]} />
       </Layout>
     </div>
   )
@@ -69,6 +69,21 @@ export const query = graphql`
         }
       }
     }
+    allWpGeneral(filter: {id: {eq: "cG9zdDo1ODA3"}}) {
+    nodes {
+      homepageContact {
+        phone
+        email
+        contactNameSecondLine
+        contactNameFirstLine
+        addressThirdLine
+        addressSecondLine
+        addressFirstLine
+        intro
+      }
+      id
+    }
+  }
   }
 `
 

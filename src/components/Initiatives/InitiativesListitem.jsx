@@ -10,7 +10,7 @@ const InitiativesListitem = ({homepageInitiatives:{ title, description, image, l
           <img src={image.mediaItemUrl} alt={title} className={styles['image']}/>
         </div>
         <div>
-        <h2 className={styles.title}>{title}</h2>
+        <h3 className={styles.title}>{title}</h3>
           <div className={styles.text}>
             <div dangerouslySetInnerHTML={{ __html: description }}>
           </div>

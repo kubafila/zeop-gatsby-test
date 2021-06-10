@@ -2,14 +2,13 @@
   display: flex;
   list-style-type: none;
 
-  &__item {
-    &:not(:last-child){
-      margin-right: 10px;
-    }
-  }
-
   &__link{
     display: block;
   }
 }
 
+.item{
+ &:not(:last-child){
+      margin-right: 10px;
+    }
+}

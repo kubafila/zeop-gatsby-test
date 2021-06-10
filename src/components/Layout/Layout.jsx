@@ -13,7 +13,7 @@ const Layout = ({children}) => {
   const checkScrollTop = () => {
     if(!isBrowser){ return }
 
-    if (window.pageYOffset >= 100) {
+    if (window.pageYOffset >= 1) {
       setScrollStarted(true)
     } else {
       setScrollStarted(false)
