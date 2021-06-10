@@ -8,7 +8,7 @@ export default function BlogPost({ data }) {
 
   const post = data.allWpPost.nodes[0]
   let image = ""
-  if (post.featuredImage.node){
+  if (post.featuredImage.node !== null){
      image = post.featuredImage.node.localFile.childImageSharp.fluid.src
   }
 
