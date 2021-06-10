@@ -1,11 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Footer from './Footer'
 import Menu from './Menu'
 import * as styles from './Layout.module.scss'
 const Layout = ({children}) => {
+
+  const [scrollStarted, setScrollStarted] = useState(false)
+  
+
+  const checkScrollTop = () => {
+    if (window.pageYOffset >= 100) {
+      setScrollStarted(true)
+    } else {
+      setScrollStarted(false)
+    }
+  };
+
+  window.addEventListener('scroll', checkScrollTop)
   return (
     <div className={styles.wrapper}>
-      <Menu />
+      <Menu scrollStarted={scrollStarted}/>
       <main className={styles.main}>
         {children}
       </main>

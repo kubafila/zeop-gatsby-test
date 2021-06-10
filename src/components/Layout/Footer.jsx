@@ -1,6 +1,6 @@
 import React from 'react'
 
-import * as styles from 'Footer.module.scss'
+import * as styles from './Footer.module.scss'
 
 const Footer = ( {children} ) => {
   return (
