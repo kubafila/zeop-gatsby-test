@@ -5,6 +5,8 @@ import * as styles from './Layout.module.scss'
 import { isBrowser } from 'react-device-detect'
 const Layout = ({children}) => {
 
+  const isBrowser = typeof window !== "undefined"
+
   const [scrollStarted, setScrollStarted] = useState(false)
   
 
