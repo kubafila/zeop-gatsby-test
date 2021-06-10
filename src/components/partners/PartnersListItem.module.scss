@@ -1,4 +1,18 @@
-.partner{
-  width: 200px;
-  height: 200px;
+.partner {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &:before {
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px) saturate(100%) contrast(45%) brightness(130%);
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    box-shadow: 0 0 1.3rem 0 rgba(0, 0, 0, 0.2);
+  }
 }

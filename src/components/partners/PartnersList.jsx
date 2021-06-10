@@ -25,7 +25,7 @@ const PartnersList = ({ nodes }) => {
         {showPartnerType('HONORARY')}
       <h3>Medialne</h3>
         {showPartnerType('MEDIA')}
-      <h3>Zwykłe</h3>
+      <h3>Pozostali</h3>
         {showPartnerType('NORMAL')}
     </section>
   )

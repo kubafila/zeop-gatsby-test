@@ -48,8 +48,11 @@ module.exports = {
          */
         url: `https://zeop.pl/blog/graphql`,
         schema: {
-          perPage: 10,
-        },
+          perPage: 5, // currently set to 10
+          requestConcurrency: 5, // currently set to 15
+          previewRequestConcurrency: 2, // currently set to 5
+        }
+
       },
     },
     // highlight-end

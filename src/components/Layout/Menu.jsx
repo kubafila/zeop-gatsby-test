@@ -11,7 +11,7 @@ const Menu = ({ scrollStarted}) => {
     <nav className={menuClass}>
       <div className={styles.wrapper}>
        
-        <div className={styles['nav__side']}>
+        <div className={styles.side}>
           <Link to="/">
             <img src={logo} alt="logo" width="125" />
         </Link>
@@ -40,7 +40,9 @@ const Menu = ({ scrollStarted}) => {
             </Link>
           </li>
         </ul>
-        <SocialMedia />
+        <div className={styles.side}>
+          <SocialMedia />
+        </div>
       </div>
     </nav>
   )
