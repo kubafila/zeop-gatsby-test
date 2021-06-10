@@ -20,7 +20,7 @@ const Layout = ({children}) => {
     }
   };
 
-  if (window){
+  if (isBrowser){
     window.addEventListener('scroll', checkScrollTop)
   }
   
