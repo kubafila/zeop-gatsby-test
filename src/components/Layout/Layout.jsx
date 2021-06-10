@@ -18,12 +18,10 @@ const Layout = ({children}) => {
     }
   };
 
-  if(!isBrowser){
-    return;
-  }
-  else{
+  if (window){
     window.addEventListener('scroll', checkScrollTop)
   }
+  
   return (
     <div className={styles.wrapper}>
       <Menu scrollStarted={scrollStarted}/>
