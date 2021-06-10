@@ -8,7 +8,7 @@ import Contact from '../components/Contact/Contact'
 import { graphql } from "gatsby"
 
 
-const index = ( { data} ) => {
+const index = ({ data }) => {
 
   const socialMedia = data.allWpSocial
   return (
@@ -17,7 +17,7 @@ const index = ( { data} ) => {
         <HeroImage />
         <About />
         <InitiativesList {...data.allWpInitiatives} />
-        <PartnersList {...data.allWpPartnetrs}/>
+        <PartnersList {...data.allWpPartnetrs} />
         <Contact {...data.allWpGeneral.nodes[0]} />
       </Layout>
     </div>
@@ -52,7 +52,13 @@ export const query = graphql`
           type
           link
           logo {
-            sourceUrl
+            localFile {
+              childImageSharp {
+                resize(width: 200, height: 200) {
+                  src
+                }
+              }
+            }
           }
         }
       }
