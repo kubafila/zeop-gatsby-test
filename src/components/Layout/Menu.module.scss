@@ -67,7 +67,7 @@
   overflow: hidden;
   z-index: 21;
   transition: color .3s;
-  margin: 0 10px;
+  margin: 0 25px;
 
   & a {
     color: inherit;
@@ -96,7 +96,6 @@
 
   &:hover {
     color: #fff;
-    // background-color: rgb(29, 41, 89);
     
     &:before{
        transform: translateY(0);
