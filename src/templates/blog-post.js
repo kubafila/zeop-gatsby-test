@@ -7,8 +7,11 @@ import Img from "gatsby-image"
 export default function BlogPost({ data }) {
 
   const post = data.allWpPost.nodes[0]
-  const image = post.featuredImage.node.localFile.childImageSharp.fluid.src
-  console.log(post)
+  let image = ""
+  if (post.featuredImage.node){
+     image = post.featuredImage.node.localFile.childImageSharp.fluid.src
+  }
+
   return (
 
     <Layout>
