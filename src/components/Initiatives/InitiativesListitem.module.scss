@@ -17,7 +17,9 @@
   position: relative;
   flex:0 0 auto;
   overflow: hidden;
-            box-shadow: 0 0 1.3rem 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 1.3rem 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+
 
   &::before{
     overflow: hidden;
@@ -57,6 +59,7 @@
 .title{
   margin-bottom: 1.2rem;
   pointer-events: auto;
+  cursor: pointer;
 }
 
 
