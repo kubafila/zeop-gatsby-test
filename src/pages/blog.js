@@ -9,7 +9,7 @@ export default function Home({ data }) {
       {data.allWpPost.nodes.map(node => (
         <div key={node.slug}>
           <Link to={node.slug}>
-            <p><i>{node.date}</i>{node.title}</p>
+            <p><i>{node.date}</i> | {node.title}</p>
             <br /> 
           </Link>
         </div>
@@ -25,7 +25,7 @@ export const pageQuery = graphql`
         title
         excerpt
         slug,
-        date
+        date(fromNow: true, locale: "pl")
         featuredImage {
         node {
           srcSet
