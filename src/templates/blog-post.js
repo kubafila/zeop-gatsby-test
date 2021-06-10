@@ -1,7 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout/Layout"
+import Img from "gatsby-image"
+
+
 export default function BlogPost({ data }) {
+
   const post = data.allWpPost.nodes[0]
   const image = post.featuredImage.node.localFile.childImageSharp.fluid.src
   console.log(post)
