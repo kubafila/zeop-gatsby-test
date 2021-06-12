@@ -21,7 +21,6 @@ const Layout = ({children}) => {
   };
 
   if (isBrowser){
-    checkScrollTop();
     window.addEventListener('scroll', checkScrollTop)
   }
   
