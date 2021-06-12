@@ -13,9 +13,8 @@ const index = ({ data }) => {
   const socialMedia = data.allWpSocial
   return (
     <div>
-      <Layout socialMedia={socialMedia}>
         <HeroImage />
-        <About />
+      <Layout socialMedia={socialMedia}>
         <InitiativesList {...data.allWpInitiatives} />
         <PartnersList {...data.allWpPartnetrs} />
         <Contact {...data.allWpGeneral.nodes[0]} />
