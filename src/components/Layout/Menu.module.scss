@@ -4,7 +4,6 @@
 
 @media (min-width: 1000px) {
   .nav {
-    overflow: hidden;
     position: fixed;
     top: 0;
     width: 100vw;
@@ -28,7 +27,7 @@
       width: 100%;
       opacity: 0;
       transition: opacity 300ms linear;
-        box-shadow: 0 0 1.3rem 0 rgba(0, 0, 0, 0.2);
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 
     }
   }
@@ -111,6 +110,7 @@
 .nav.sticky{
       background-color: transparent;
       transform: translateY(-25px);
+
   &:before {
     opacity: 1;
   }
