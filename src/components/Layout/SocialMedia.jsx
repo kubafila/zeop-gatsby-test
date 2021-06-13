@@ -31,7 +31,7 @@ const SocialMedia = ({ nodes }) => {
         {data.allWpSocial.nodes.map(({ id, homepageSocial: { name, link, icon, iconHover } }) => (
           <li key={id} className={styles.item}>
             <a href={link}>
-              <img src={icon.sourceUrl} alt={name} height="48" width="48" />
+              <img src={icon.sourceUrl} alt={name} height="40" width="40" />
             </a>
           </li>
         ))}

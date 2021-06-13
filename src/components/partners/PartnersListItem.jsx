@@ -7,8 +7,8 @@ const PartnersListItem = ({  name, type, link, logo}) => {
   const logoURL = logo.localFile.childImageSharp.fixed.src
   return (
     <li className={styles.partner}>
-      <a href={link} className={styles.link}>
-      <img src={logoURL} width="200" className={styles.image} alt={name}/>
+      <a href={link} className={styles.link}> 
+       <img src={logoURL} width="200" className={styles.image} alt={name}/>
       </a>
     </li>
   )

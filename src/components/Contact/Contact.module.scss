@@ -6,9 +6,20 @@
 
 .links-wrapper{
   margin-top: 50px;
-  display: flex;
-  justify-content: space-between;
+  li{
+    margin-top: 50px;
+  }
   a{
     color: inherit;
+  }
+}
+
+@media (min-width:1024px) {
+  .links-wrapper{
+    li{
+      margin-top: 0;
+    }
+    display: flex;
+      justify-content: space-between;
   }
 }

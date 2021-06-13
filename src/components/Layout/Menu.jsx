@@ -1,11 +1,22 @@
+import React, { useState } from 'react'
 import { Link } from 'gatsby'
-import React from 'react'
 import * as styles from './Menu.module.scss'
 import SocialMedia from './SocialMedia'
 import logo from '../../images/zeop-logo.svg'
+import star from './../../images/star.svg'
 
 const Menu = ({ scrollStarted}) => {
-  const menuClass = scrollStarted ? `${styles.nav} ${styles.sticky}` : styles.nav;
+  
+  const [menuFrosted, setMenuStyle] = useState(true);
+
+  const handleMenuClick = () => {
+    setMenuStyle(!menuFrosted);
+  }
+
+  let menuClass = `${styles.nav}  ${styles.sticky} ${menuFrosted ? styles.frosted : styles.white}`
+  if (!scrollStarted) { menuClass = styles.nav; }
+
+
 
   return (
     <nav className={menuClass}>
@@ -39,10 +50,12 @@ const Menu = ({ scrollStarted}) => {
               Kontakt
             </Link>
           </li>
+
         </ul>
         <div className={styles.side}>
           <SocialMedia />
         </div>
+        <img src={star} width="40" height="40" onClick={() => {handleMenuClick()}}/>
       </div>
     </nav>
   )
