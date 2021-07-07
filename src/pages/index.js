@@ -14,7 +14,7 @@ const index = ({ data }) => {
   return (
     <div>
         <HeroImage />
-      <Layout socialMedia={socialMedia}>
+        <Layout socialMedia={socialMedia}>
         <InitiativesList {...data.allWpInitiatives} />
         <PartnersList {...data.allWpPartnetrs} />
         <Contact {...data.allWpGeneral.nodes[0]} />
