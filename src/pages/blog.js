@@ -1,20 +1,17 @@
 import React from "react"
 import { Link, graphql } from "gatsby" //highlight-line
 import Layout from '../components/Layout/Layout'
+import Post from '../components/Post/Post'
 import * as styles from './blog.module.scss'
 
 export default function Home({ data }) {
   return (
     <Layout>
       <h1>Lista wpisów</h1>
-      {data.allWpPost.nodes.map(node => (
-        <div key={node.slug} className={styles.post}>
-          <Link to={node.slug}>
-            <p><i>{node.date}</i> | {node.title}</p>
-            <br /> 
-          </Link>
-        </div>
-      ))}
+      <ul className={styles.list}>
+        {data.allWpPost.nodes.map(data => (
+          <Post {...data} key={data.id} />))}
+      </ul>
     </Layout>
   )
 }
@@ -26,10 +23,11 @@ export const pageQuery = graphql`
         title
         excerpt
         slug,
-        date(fromNow: true, locale: "pl")
+        id,
+        date(locale: "pl-PL", formatString: " D MMMM YYYY")
         featuredImage {
         node {
-          srcSet
+          sourceUrl
         }
       }
       }

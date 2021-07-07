@@ -24,13 +24,13 @@ const Menu = ({ scrollStarted}) => {
        
         <div className={styles.side}>
           <Link to="/">
-            <img src={logo} alt="logo" width="125" />
+            <img src={logo} alt="logo" width="125" onClick={() => {handleMenuClick()}}/>
         </Link>
         
         </div>
         <ul className={styles.menu}>
           <li className={styles.menuItem}>
-            <Link to="#" className={styles.link}>
+            <Link to="/#" className={styles.link}>
               O nas
               </Link>
           </li>
@@ -55,7 +55,6 @@ const Menu = ({ scrollStarted}) => {
         <div className={styles.side}>
           <SocialMedia />
         </div>
-        <img src={star} width="40" height="40" onClick={() => {handleMenuClick()}}/>
       </div>
     </nav>
   )

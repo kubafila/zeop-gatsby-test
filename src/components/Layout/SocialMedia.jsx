@@ -10,6 +10,7 @@ const SocialMedia = ({ nodes }) => {
     query HeaderQuery {
   allWpSocial {
     nodes {
+      id,
       homepageSocial {
         link
         icon {
